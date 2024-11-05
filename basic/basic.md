@@ -124,12 +124,12 @@ type -t bash
 ```
 ## 快捷键
 Bash提供了很多的快捷键，可以方便操作。  
-Ctrl+L： 清楚屏幕  
-Ctrl+C：终止当前正在执行的命令  
-Shift+PageUp：向上滚动  
-Shift+PageDown：向下滚动  
-Ctrl+U：从光标位置删除到行首  
-Ctrl+K：从光标位置删除到行尾  
-Ctrl+W：从光标位置向前删除一个单词  
-Ctrl+D：关闭shell会话  
-Tab：自动补全  
+- Ctrl+L： 清楚屏幕  
+- Ctrl+C：终止当前正在执行的命令  
+- Shift+PageUp：向上滚动  
+- Shift+PageDown：向下滚动  
+- Ctrl+U：从光标位置删除到行首  
+- Ctrl+K：从光标位置删除到行尾  
+- Ctrl+W：从光标位置向前删除一个单词  
+- Ctrl+D：关闭shell会话  
+- Tab：自动补全  
