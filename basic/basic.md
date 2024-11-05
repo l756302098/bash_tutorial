@@ -119,6 +119,7 @@ type -t可以返回一个命令的类型，别名（alias），关键字（keywo
 ``` shell
 type -t ls
 type -t if
+type quote_readline
 type -t echo
 type -t bash
 ```

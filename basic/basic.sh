@@ -22,3 +22,12 @@ foo;ls
 cat zed.sh ;ls -l zed.sh
 cat zed.sh && ls -l zed.sh
 cat zed.s || ls -l zed.sh
+
+type echo
+type -a echo
+
+type -t ls
+type -t if
+type quote_readline
+type -t echo
+type -t bash
