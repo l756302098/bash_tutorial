@@ -187,3 +187,160 @@ echo $#
 echo $@
 ```
 ## 变量的默认值
+Bash提供了四种特殊语法，跟变量的默认值有关，目的是保证变量不为空。
+``` shell
+${varname:-word}
+echo ${count:-0}
+```
+上面语法的含义是，如果变量varname存在且不为空则返回它的值，否则返回word。  
+它的目的是返回一个默认值。
+=
+``` shell
+${varname:=word}
+echo ${count:=0}
+```
+上面语法的含义是，如果变量varname存在且不为空则返回它的值，否则将它设为word并返回word。  
+它的目的是设置一个默认值。
+``` shell
+${varname:+word}
+echo ${count:+0}
+echo ${count:+1}
+```
+上面语法的含义是，如果变量varname存在且不为空则返回它的值，否则返回空值。  
+它的目的是测试变量是否存在，比如${count:+1}表示变量count存在时返回1，否则返回空值。
+``` shell
+${varname:?message}
+echo ${var:?1}
+```
+上面语法的含义是，如果变量varname存在且不为空则返回它的值，否则打印bash: varname: message，
+并且中断Shell的执行。  
+它的目的是防止变量未定义，比如${count:?"undefined!"}表示变量count未定义就中断执行，并且返回bash: count: undefined!
+
+上面四种语法如果在脚本中使用，变量名的部分可以用数字1到9表示脚本的参数。 
+``` shell 
+${varname:?message}
+filename=${1:?"filename missing."}
+```
+上面的代码表示1表示脚本的第一个参数，如果该参数不存在，就退出脚本并报错。
+## declare 命令
+declare命令可以声明一些特殊类型的变量，为变量设置一些限制，比如声明只读类型的变量和整数类型的变量。
+它的语法形式如下:
+``` shell 
+declare OPTION VARIABLE=value
+```
+declare命令的主要参数（OPTION）如下:
+- -a :声明数组变量。
+- -f :声明所有函数定义。
+- -F :声明所有函数名。
+- -i :声明整数变量。
+- -l :声明变量为小写字母。
+- -p :声明变量信息。
+- -r :声明只读变量。
+- -u :声明变量为大写字母。
+- -x :该变量输出为环境变量。
+
+declare 命令如果用在函数中，声明的变量只在函数内部有效，等同于local命令。  
+不带任何参数是，declare命令输出当前环境的所有变量，包括函数在内，等同于不带内核参数的set命令。
+### -i 参数
+-i 参数声明整数变量以后，可以直接进行整数运算。
+``` shell 
+declare -i val1=1 val2=2
+declare -i result
+result=val1*val2
+echo $result
+```
+上面的例子中，如果变量result不声明为整数，val1*val2会被当做字面量，不会进行整数运算。
+另外，val1和val2不需要声明为整数，只需要将result声明为整数它的赋值会自动解释为整数运算。
+``` shell 
+val3=1;val4=3
+declare -i result
+result=val3*val4
+echo $result
+```
+注意，一个声明为整数的变量，依旧可以被改写为字符串。  
+### -x 参数
+-x 参数等同于export命令，可以输出一个变量为子Shell的环境变量。  
+``` shell 
+declare -x foo
+foo=hello
+#进入子bash
+bash
+echo $foo
+#等价
+export foo
+```
+### -r 参数
+-x 参数可以声明只读变量，无法改变变量值，也不能unset变量。
+``` shell 
+declare -r bar=1
+bar=2
+echo $?
+unset bar
+echo $?
+```
+### -x 参数
+-x 参数等同于export命令，可以输出一个变量为子Shell的环境变量。  
+``` shell 
+declare -x foo
+foo=hello
+#进入子bash
+bash
+echo $foo
+#等价
+export foo
+```
+### -u 参数
+-u 参数声明变量为大写字母，可以自动把变量转成大写字母。
+``` shell 
+declare -u foo
+foo=upper
+echo $foo
+```
+### -l 参数
+-l 参数声明变量为小写字母，可以自动把变量转成小写字母。
+``` shell 
+declare -l bar
+bar=LOWER
+echo $bar
+```
+### -p 参数
+-p 参数输出变量信息。对于不存在的变量，输出not found
+``` shell 
+bar=LOWER
+declare -p bar
+```
+### -f 参数
+-f 参数输出当前环境的所有函数，包括它的定义。
+``` shell 
+declare -f
+```
+### -F 参数
+-F 参数输出当前环境的所有函数名。
+``` shell 
+declare -F
+```
+## readonly 命令
+readonly命令等同于declare -r，用来声明只读变量，不能改变变量值也不能unset。
+它的语法形式如下:
+``` shell 
+readonly fp=1
+fp=3
+echo $?
+```
+## let 命令
+let命令声明变量时，可以直接执行算数表达式。
+它的语法形式如下:
+``` shell 
+let f=1+2
+echo ${f}
+```
+let命令的参数表达式如果包括空格，就需要使用引号。
+``` shell 
+let "d = 1 + 4"
+echo ${d}
+```
+let可以同时对多个表达式赋值，赋值表达式之间需要用空格分隔。
+``` shell 
+let "v1 = 1" "v2 = 2 + 1"
+echo $v1,$v2
+```
