@@ -15,6 +15,9 @@ ubuntu22.04/x86_64
 - [Bash变量](./var/var.md) 
 - [Bash字符串操作](./string/string.md) 
 - [Bash的算术运算](./arithmetic/arithmetic.md) 
+- [Bash的操作历史](./history/history.md)（TODO）
+- [Bash的行操作](./line/line.md)（TODO）
+- [Bash的目录堆栈](./dir/dir.md)
 - [常用命令之grep](./grep/grep.md)  
 - [常用命令之sed](./sed/sed.md)  
 - [常用命令之awk](./awk/awk.md)  
