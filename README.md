@@ -8,11 +8,12 @@ Shell有很多种，这里指Linux Bash。
 ## 测试环境  
 ubuntu22.04/x86_64  
 
-## Bash目录  
+## 目录  
 - [Bash基本语法](./basic/basic.md)   
 - [Bash的模式扩展](./extension/extension.md)  
-- [引号与转义](./quote/quote.md)  
+- [Bash引号与转义](./quote/quote.md)  
 - [Bash变量](./var/var.md) 
+- [Bash字符串操作](./string/string.md) 
 - [常用命令之grep](./grep/grep.md)  
 - [常用命令之sed](./sed/sed.md)  
 - [常用命令之awk](./awk/awk.md)  
