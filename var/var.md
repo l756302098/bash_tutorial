@@ -192,9 +192,8 @@ Bash提供了四种特殊语法，跟变量的默认值有关，目的是保证�
 ${varname:-word}
 echo ${count:-0}
 ```
-上面语法的含义是，如果变量varname存在且不为空则返回它的值，否则返回word。  
-它的目的是返回一个默认值。
-=
+上面语法的含义是，如果变量varname存在且不为空则返回它的值，否则返回word。    
+它的目的是返回一个默认值。  
 ``` shell
 ${varname:=word}
 echo ${count:=0}
