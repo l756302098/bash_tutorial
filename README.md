@@ -18,6 +18,7 @@ ubuntu22.04/x86_64
 - [Bash的操作历史](./history/history.md)（TODO）
 - [Bash的行操作](./line/line.md)（TODO）
 - [Bash的目录堆栈](./dir/dir.md)
+- [Bash的脚本入门](./scripts/scripts.md)
 - [常用命令之grep](./grep/grep.md)  
 - [常用命令之sed](./sed/sed.md)  
 - [常用命令之awk](./awk/awk.md)  
