@@ -269,7 +269,7 @@ echo $foo
 export foo
 ```
 ### -r 参数
--x 参数可以声明只读变量，无法改变变量值，也不能unset变量。
+-r 参数可以声明只读变量，无法改变变量值，也不能unset变量。
 ``` shell 
 declare -r bar=1
 bar=2
