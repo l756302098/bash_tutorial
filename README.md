@@ -9,22 +9,22 @@ Shell有很多种，这里指Linux Bash。
 ubuntu22.04/x86_64  
 
 ## 目录  
-- [Bash基本语法](./basic/basic.md)   
-- [Bash的模式扩展](./extension/extension.md)  
-- [Bash引号与转义](./quote/quote.md)  
+- [基本语法](./basic/basic.md)   
+- [模式扩展](./extension/extension.md)  
+- [引号与转义](./quote/quote.md)  
 - [Bash变量](./var/var.md) 
 - [Bash字符串操作](./string/string.md) 
-- [Bash的算术运算](./arithmetic/arithmetic.md) 
-- [Bash的操作历史](./history/history.md)（TODO）
-- [Bash的行操作](./line/line.md)（TODO）
-- [Bash的目录堆栈](./dir/dir.md)
-- [Bash的脚本入门](./scripts/scripts.md)
-- [Bash的read命令](./read/read.md)
-- [Bash的条件判断](./condition/condition.md)
-- [Bash的循环](./loop/loop.md)
-- [Bash的数组](./array/array.md)
-- [Bash的数组](./array/array.md)
-- [Bash的重定向](./redirect/redirect.md)
-- [常用命令之grep](./grep/grep.md)  
-- [常用命令之sed](./sed/sed.md)  
-- [常用命令之awk](./awk/awk.md)  
+- [算术运算](./arithmetic/arithmetic.md) 
+- [操作历史](./history/history.md)（TODO）
+- [行操作](./line/line.md)（TODO）
+- [目录堆栈](./dir/dir.md)
+- [脚本入门](./scripts/scripts.md)
+- [read命令](./read/read.md)
+- [条件判断](./condition/condition.md)
+- [循环](./loop/loop.md)
+- [数组](./array/array.md)
+- [set、shopt命令](./set/set.md)
+- [重定向](./redirect/redirect.md)
+- [常用命令之grep](./grep/grep.md)  （TODO）
+- [常用命令之sed](./sed/sed.md)  （TODO）
+- [常用命令之awk](./awk/awk.md)  （TODO）
