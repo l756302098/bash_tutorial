@@ -1,0 +1,7 @@
+total 16
+-rw-rw-r-- 1 li li    0 11月 12 14:14 a.txt
+-rw-rw-r-- 1 li li   53 11月 12 14:20 err
+-rw-rw-r-- 1 li li    6 11月 12 14:20 out
+-rw-rw-r-- 1 li li    0 11月 12 14:21 output.txt
+-rw-rw-r-- 1 li li 3251 11月 12 14:20 redirect.md
+-rwxrwxr-x 1 li li   28 11月 12 10:20 redirect.sh
