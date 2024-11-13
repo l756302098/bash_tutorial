@@ -22,13 +22,15 @@ cd $dir_name && rm *
 ``` shell
 [[ -d $dir_name ]] && cd $dir_name && echo rm *
 ```
-## bash的-x参数
+## bash的参数
 bash的-x参数可以在执行每一行命令之前，打印该命令。一旦出错，这样就比较容易追查。  
 下面是一个脚本script.sh。
 ``` shell
 echo hello world
 ```
-加上-x参数，执行每条命令之前，都会显示该命令。  
+- -n: 不运行脚本，只检查是否有语法错误。  
+- -v: 输出每一行语句运行结果前，会先输出该行语句。  
+- -x: 执行每条命令之前，都会显示该命令。  
 ``` shell
 bash -x script.sh
 ```
