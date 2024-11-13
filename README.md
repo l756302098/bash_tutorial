@@ -27,6 +27,6 @@ ubuntu22.04/x86_64
 - [脚本除错](./error/error.md)
 - [mktemp、trap命令](./mktemp/mktemp.md)
 - [重定向](./redirect/redirect.md)
-- [常用命令之grep](./grep/grep.md)  （TODO）
+- [常用命令之grep](./grep/grep.md)
 - [常用命令之sed](./sed/sed.md)  （TODO）
 - [常用命令之awk](./awk/awk.md)  （TODO）
