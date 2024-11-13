@@ -24,6 +24,8 @@ ubuntu22.04/x86_64
 - [循环](./loop/loop.md)
 - [数组](./array/array.md)
 - [set、shopt命令](./set/set.md)
+- [脚本除错](./error/error.md)
+- [set、shopt命令](./set/set.md)
 - [重定向](./redirect/redirect.md)
 - [常用命令之grep](./grep/grep.md)  （TODO）
 - [常用命令之sed](./sed/sed.md)  （TODO）
